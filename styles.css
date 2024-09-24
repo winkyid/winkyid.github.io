@@ -1,0 +1,214 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Top Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Days Container */
+.days-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 60px 20px 20px;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+/* Day Box */
+.day-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.day-box:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+/* View Button */
+.view-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* box welcom tester*/
+.box-welcome {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Blur effect for background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Schedule Detail Box */
+.schedule-detail {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Blur effect for background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.schedule-detail.active {
+    display: flex; /* Show detail box when active */
+}
+
+/* Detail Box Content */
+.detail-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out; /* Optional fade-in effect */
+}
+
+.detail-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.detail-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.detail-content button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.detail-content button:hover {
+    background-color: #c0392b;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+    background-color: #34495e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.bottom-navbar ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.bottom-navbar li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+
+.bottom-navbar li a i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Dynamic Notifications */
+#notification-area {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    z-index: 9999;
+    width: 90%;
+    max-width: 350px;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.notification i {
+    margin-right: 10px;
+}
+
+.notification.success {
+    background-color: #2ecc71;
+}
+
+.notification.error {
+    background-color: #e74c3c;
+}
+
+.notification.info {
+    background-color: #3498db;
+}
+
+.notification.warning {
+    background-color: #f39c12;
+}
