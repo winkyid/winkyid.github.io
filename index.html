@@ -1,0 +1,148 @@
+<!--NAMA        : WINKY KURNIATAMA-->
+<!--NIM         : 23.54.027135-->
+<!--PRODI       : SISTEM INFORMASI-->
+<!--SEMESTER    : 3 (GANJIL)-->
+<!--MATKUL      : PEMROGAMAN WEB-->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LowBudget Caffe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header tetap di atas, mengandung nama foodcourt -->
+<header>
+    <img src="aset-gambar/iconlogo/logo-lb.jpg" alt="Logo Kiri" class="logo">
+    <div>
+        <h1>LowBudget Caffe</h1>
+        <p class="sub-title">Palangka Raya, Jl. Tjilik Riwut Km. 8</p>
+    </div>
+    <img src="aset-gambar/iconlogo/icon-people-withBg.jpg" alt="Logo Kanan" class="logo">
+</header>
+
+
+<!-- Navbar untuk navigasi ke tiap section -->
+<nav>
+    <ul>
+        <li><a href="#home" class="navbar-v2">Home</a></li>
+        <li><a href="#menu" class="navbar-v2">Menu</a></li>
+        <li><a href="#contact" class="navbar-v2">Kontak</a></li>
+        <li><a href="#aboutme" class="navbar-v2">AboutMe</a></li>
+    </ul>
+</nav>
+
+<!-- Section Home dengan background gambar -->
+<section id="home" class="content-section-animated" style="text-align: center;">
+    <h2>Selamat Datang di Foodcourt Kami</h2>
+    <p style="text-align: center;padding-bottom: 20px;">Ini adalah foodcourt dengan berbagai macam makanan lezat dan murah meriah.</p>
+    <img src="aset-gambar/home/1.jpg" alt="homeimg" class="gambar-home">
+    <img src="aset-gambar/home/1.jpg" alt="homeimg" class="gambar-home">
+    <img src="aset-gambar/home/1.jpg" alt="homeimg" class="gambar-home">
+</section>
+
+<!-- Section Menu dengan tabel makanan -->
+<section id="menu" class="content-section">
+    <h2 style="text-align: center;"><a href="#makanan" class="menu-tab-active">Makanan</a> & <a href="#minuman" class="menu-tab">Minuman</a></h2>
+    <div class="garis-navbar"></div>
+    <table>
+        <tr>
+            <th class="th-kiri">Gambar</th>
+            <th class="th-tengah">Makanan</th>
+            <th class="th-kanan">Harga</th>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/food/nasgorbiasa.jpg" alt="nasgor" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Nasi Goreng</td>
+            <td>Rp 8.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/food/nasgor-spesial.jpg" alt="nasgorsps" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Nasi Goreng Special</td>
+            <td>Rp 10.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/food/bakso-ori.jpg" alt="bakso" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Bakso</td>
+            <td>Rp 8.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/food/bakso-mercon.jpg" alt="baksomercon" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Bakso Mercon</td>
+            <td>Rp 15.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/food/mieayam.jpg" alt="miayam" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Mie Ayam</td>
+            <td>Rp 12.000</td>
+        </tr>
+        <!-- Tambahkan minimal 5 menu sesuai soal -->
+    </table>
+</section>
+
+<section id="minuman" class="content-section">
+    <h2 style="text-align: center;"><a href="#makanan" class="menu-tab">Makanan</a> & <a href="#minuman" class="menu-tab-active">Minuman</a></h2>
+    <div class="garis-navbar"></div>
+    <table style="animation: geserKiri 1s ease;">
+        <tr>
+            <th class="th-kiri">Gambar</th>
+            <th class="th-tengah">Minuman</th>
+            <th class="th-kanan">Harga</th>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/drink/teh.jpg" alt="Teh (Dingin & Panas)"  class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Teh (Dingin & Panas)</td>
+            <td>Rp 3.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/drink/KopiHitam.jpg" alt="Kopi" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Kopi Hitam</td>
+            <td>Rp 3.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/drink/Susu.jpg" alt="Susu (Dingin & Panas)" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Susu (Dingin & Panas)</td>
+            <td>Rp 3.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/drink/kopisusu.jpg" alt="Kopi Susu" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Kopi Susu</td>
+            <td>Rp 5.000</td>
+        </tr>
+        <tr>
+            <td><img src="aset-gambar/drink/jus-alpukat.jpg" alt="Jus Alpukat" class="gambar-menu"><div><button class="tombol-pesan">Pesan</button></div></td>
+            <td>Jus Alpukat</td>
+            <td>Rp 8.000</td>
+        </tr>
+        
+        <!-- Tambahkan minimal 5 menu sesuai soal -->
+    </table>
+</section>
+
+<!-- Section Contact untuk kontak -->
+<section id="contact" class="content-section-animated">
+    <h2>Hubungi Kami</h2>
+    <p>Ini adalah halaman kontak foodcourt kami.</p>
+</section>
+
+<!-- Section About Me untuk informasi tentang kami -->
+<section id="aboutme" class="content-section-animated">
+    <h2>Tentang Saya</h2>
+    <p>Nama : Winky Kurniatama</p>
+    <p>Nim : 23.54.027135</p>
+    <p>Prodi : Sistem Informasi</p>
+    <p>Matkul : Pemrogaman Web</p>
+    <p>Semester : 3 (Ganjil)</p>
+</section>
+
+<!-- Footer fixed di bawah, berisi copyright -->
+<footer>
+    <p>&copy; 2024 Winky Kurniatama</p>
+</footer>
+
+</body>
+</html>

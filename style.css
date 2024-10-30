@@ -1,0 +1,305 @@
+/* Reset untuk margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {  
+    display: none; /* Sembunyikan scrollbar */  
+}
+
+/* Style umum */
+body {
+    background-color: #000000;
+    color: #333;
+    background-image: url('aset-gambar/bg/1.jpg'); /* Ganti dengan path gambar kamu */
+    background-size: cover; /* Menyesuaikan gambar agar memenuhi layar */
+    background-attachment: fixed; /* Agar background tidak bergerak saat di-scroll */
+    background-position: center; /* Posisikan di tengah layar */
+    background-repeat: no-repeat; /* Menghindari gambar diulang */
+    user-select: none;
+    
+    
+}
+
+/* Header dan Footer tetap di atas dan bawah */
+header, footer{
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Menempatkan logo di kiri dan kanan */
+    padding: 1em;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.sub-title {
+    font-size: 0.8em; /* Mengatur ukuran teks lebih kecil */
+    color: #ddd; /* Warna teks lebih redup */
+    text-align: center; /* Teks berada di tengah di bawah judul */
+}
+
+footer {
+    bottom: 0;
+}
+
+/* Style Navbar transparan */
+nav {
+    background: rgba(255, 255, 255, 0.6); /* transparan */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 90px;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 0;
+    z-index: 9;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+/* Section untuk tiap konten */
+.content-section {
+    display: none;
+    padding: 9em 2em; /* Padding untuk memberi ruang pada header dan footer */
+    min-height: calc(100vh - 160px); /* Penyesuaian tinggi untuk header dan footer */
+    background-size: cover;
+    background-position: center;
+    color: #ddd;  
+}
+
+.content-section-animated {
+    display: none;
+    padding: 7em 2em; /* Padding untuk memberi ruang pada header dan footer */
+    min-height: calc(100vh - 160px); /* Penyesuaian tinggi untuk header dan footer */
+    background-size: cover;
+    background-position: center;
+    color: #ddd;  
+    animation: masukMemudar 1s ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.gambar-menu {
+    width: 80px;
+    height: auto;
+    border-radius: 15px; /* Radius gambar di dalam tabel */
+}
+
+.gambar-home {
+    width: 20rem;
+    height: auto;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+/* Menampilkan section yang ditargetkan */
+#home:target, #menu:target, #contact:target, #aboutme:target {
+    display: block;
+}
+
+/* pilihan set untuk tampilan pages sebagai default */
+body:not(:has(:target)) #menu {
+    display: block;
+}
+
+/* Style judul */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+/* Tabel menu makanan */
+table {
+    width: 100%;
+    margin-top: 1em;
+    border-collapse: collapse;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    
+    
+    animation: geserKanan 1s ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+th, td {
+    padding: 1em;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ffffff20;
+}
+
+
+.th-kiri {
+    background: rgba(0, 0, 0, 0.423);
+    font-weight: bold;
+    border-radius: 25px 0px 0px 0px;
+}
+
+.th-tengah {
+    background: rgba(0, 0, 0, 0.423);
+    font-weight: bold;
+    border-right: 1px solid #ffffff6a;
+    border-left: 1px solid #ffffff6a;
+}
+
+.th-kanan {
+    background: rgba(0, 0, 0, 0.423);
+    font-weight: bold;
+    border-radius: 0px 25px 0px 0px;
+}
+
+section p {
+    text-align: justify;
+}
+
+/* Footer text */
+footer p {
+    font-size: 0.9em;
+}
+
+.menu-content {
+    display: none; /* Sembunyikan semua konten menu secara default */
+}
+
+#menu:target #makanan {
+    display: block; /* Tampilkan konten makanan jika targetnya adalah #makanan */
+}
+
+#minuman:target {
+    display: block; /* Tampilkan konten minuman jika targetnya adalah #minuman */
+}
+
+/* Menampilkan section makanan sebagai default ketika tidak ada yang ditarget */
+body:not(:has(:target)) #makanan {
+    display: block; /* Tampilkan makanan secara default */
+}
+
+.menu-tab {
+    color: #ddd;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.menu-tab-active {
+    color: #ddd;
+    background-color: transparent;
+    text-decoration:none;
+    border-bottom: 5px solid #ffffff;
+}
+/* Tombol styles */
+.tombol-pesan {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 15px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.tombol-pesan:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Animasi setting akwokaokw aku nak meletup :v*/
+
+/*Animasi memudar/fade*/
+@keyframes masukMemudar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Animasi geser kanan*/
+@keyframes geserKanan {  
+  from {  
+    transform: translateX(-2%);  
+    opacity: 0%;
+  }  
+  to {  
+    transform: translateX(0);  
+    opacity: 100%;
+  }  
+}  
+
+@keyframes geserKiri {  
+    from {  
+      transform: translateX(2%);  
+      opacity: 0%;
+    }  
+    to {  
+      transform: translateX(0);  
+      opacity: 100%;
+    }  
+  }  
+
+.slide {  
+  animation: slideRight 1s ease;  
+}
+
+/* (uji coba) nge fix layar ppi dibawah 377 px yg ngebug navbar ketutup*/
+@media (max-width: 377px) {
+    nav {
+        top: 130px;
+    }
+    .content-section {
+        padding: 9em 2em;
+    }
+    .content-section-animated {
+        padding: 9em 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/*masih bug di sekitaran 348px wakowkaok capek nyetting*/
