@@ -57,5 +57,10 @@
         </div>
     </div>
 </body>
+<script>
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log('SW terdaftar!'))
+    .catch(err => console.log('Gagal:', err));
+</script>
 </html>
 
